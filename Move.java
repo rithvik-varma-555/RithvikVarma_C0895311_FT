@@ -107,4 +107,18 @@ class Box {
 			}
 		}
 	}
+
+	public int find(String itemName) {
+		for (Object item : contents) {
+			if (item instanceof SingleObject && ((SingleObject) item).getName().equals(itemName)) {
+				return boxNumber;
+			} else if (item instanceof Box) {
+				int foundInBox = ((Box) item).find(itemName);
+				if (foundInBox >= 0) {
+					return foundInBox;
+				}
+			}
+		}
+		return -1; // Item not found in this box
+	}
 }
