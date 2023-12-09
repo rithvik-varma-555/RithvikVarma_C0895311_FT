@@ -97,4 +97,14 @@ class Box {
 	public void addItem(Object item) {
 		contents.add(item);
 	}
+
+	public void printContents() {
+		for (Object item : contents) {
+			if (item instanceof SingleObject) {
+				System.out.println(((SingleObject) item).getName());
+			} else if (item instanceof Box) {
+				((Box) item).printContents();
+			}
+		}
+	}
 }
