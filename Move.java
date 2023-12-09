@@ -9,6 +9,17 @@ class Move {
 		this.boxes = new ArrayList<>(numBoxes);
 	}
 
+	public void addBox(Box box) {
+		boxes.add(box);
+	}
+
+	public void print() {
+		System.out.println("The objects of my move are:");
+		for (Box box : boxes) {
+			box.printContents();
+		}
+	}
+
 	/* *************************************** */
 
 	public static void main(String[] args) {
