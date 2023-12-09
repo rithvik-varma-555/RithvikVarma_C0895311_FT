@@ -3,7 +3,11 @@ import java.util.List;
 class Move {
 	/* *************************************** */
 	// write your code here
+	private List<Box> boxes;
 
+	public Move(int numBoxes) {
+		this.boxes = new ArrayList<>(numBoxes);
+	}
 
 	/* *************************************** */
 
