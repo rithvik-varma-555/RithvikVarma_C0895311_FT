@@ -111,7 +111,7 @@ class Box {
 	public int find(String itemName) {
 		for (Object item : contents) {
 			if (item instanceof SingleObject && ((SingleObject) item).getName().equals(itemName)) {
-				return boxNumber;
+				return boxNum;
 			} else if (item instanceof Box) {
 				int foundInBox = ((Box) item).find(itemName);
 				if (foundInBox >= 0) {
