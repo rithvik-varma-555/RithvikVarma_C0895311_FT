@@ -122,3 +122,7 @@ class Box {
 		return -1; // Item not found in this box
 	}
 }
+
+class SingleObject {
+
+}
