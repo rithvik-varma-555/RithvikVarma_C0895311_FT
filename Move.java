@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 class Move {
 	/* *************************************** */
 	// write your code here
@@ -80,5 +82,15 @@ class Move {
 
 		// We print the number of the outermost cardboard containing the item "scarf"
 		System.out.println("The sarf is in the cardboard number " + move.find("scarf"));
+	}
+}
+
+class Box {
+	private List<Object> contents;
+	private int boxNum;
+
+	public Box(int capacity,int boxNum) {
+		this.contents = new ArrayList<>(capacity);
+		this.boxNum = boxNum;
 	}
 }
