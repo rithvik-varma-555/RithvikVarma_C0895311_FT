@@ -20,6 +20,16 @@ class Move {
 		}
 	}
 
+	public int find(String itemName) {
+		for (int i = 0; i < boxes.size(); i++) {
+			int boxNumber = boxes.get(i).find(itemName);
+			if (boxNumber >= 0) {
+				return boxNumber;
+			}
+		}
+		return -1; // Item not found in any box
+	}
+
 	/* *************************************** */
 
 	public static void main(String[] args) {
