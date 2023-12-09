@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
 class Move {
 	/* *************************************** */
 	// write your code here
@@ -23,12 +21,12 @@ class Move {
 	}
 
 	public int find(String itemName) {
-		for (int i = 0; i < boxes.size(); i++) {
-			int boxNumber = boxes.get(i).find(itemName);
-			if (boxNumber >= 0) {
-				return boxNumber;
-			}
-		}
+        for (Box box : boxes) {
+            int boxNumber = box.find(itemName);
+            if (boxNumber >= 0) {
+                return boxNumber + 1;
+            }
+        }
 		return -1; // Item not found in any box
 	}
 
