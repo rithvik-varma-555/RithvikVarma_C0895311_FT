@@ -3,7 +3,7 @@ import java.util.List;
 class Move {
 	/* *************************************** */
 	// write your code here
-	private List<Box> boxes;
+	private final List<Box> boxes;
 
 	public Move(int numBoxes) {
 		this.boxes = new ArrayList<>(numBoxes);
@@ -27,7 +27,7 @@ class Move {
                 return boxNumber + 1;
             }
         }
-		return -1; // Item not found in any box
+		return -1;
 	}
 
 	/* *************************************** */
@@ -84,8 +84,8 @@ class Move {
 }
 
 class Box {
-	private List<Object> contents;
-	private int boxNum;
+	private final List<Object> contents;
+	private final int boxNum;
 
 	public Box(int capacity,int boxNum) {
 		this.contents = new ArrayList<>(capacity);
@@ -122,7 +122,7 @@ class Box {
 }
 
 class SingleObject {
-	private String name;
+	private final String name;
 	public SingleObject(String name) {
 		this.name = name;
 	}
