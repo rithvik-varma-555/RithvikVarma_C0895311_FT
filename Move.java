@@ -93,4 +93,8 @@ class Box {
 		this.contents = new ArrayList<>(capacity);
 		this.boxNum = boxNum;
 	}
+
+	public void addItem(Object item) {
+		contents.add(item);
+	}
 }
